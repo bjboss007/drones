@@ -1,0 +1,11 @@
+
+server:
+  port: 9094
+
+spring:
+  data:
+    mongodb:
+      database: musaladrone
+      host: localhost
+      port: 27017
+      auto-index-creation: true
