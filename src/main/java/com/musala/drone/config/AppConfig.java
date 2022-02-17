@@ -1,10 +1,14 @@
 package com.musala.drone.config;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.data.mongodb.core.MongoTemplate;
 
 @Configuration
-public class AppConfiguration {
+public class AppConfig {
 
+    @Bean
+    public ModelMapper modelMapper(){
+        return new ModelMapper();
+    }
 }

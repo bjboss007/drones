@@ -45,6 +45,6 @@ public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
                 .message(ex.getMessage())
                 .details(request.getDescription(false))
                 .build();
-        return new ResponseEntity<>(exceptionResponse, HttpStatus.METHOD_NOT_ALLOWED);
+        return new ResponseEntity<>(exceptionResponse, HttpStatus.BAD_REQUEST);
     }
 }

@@ -12,6 +12,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 
 @Document
@@ -23,8 +24,13 @@ public class Drone {
     @Id
     private String id;
     private double weight;
+    @Builder.Default
+    private String serialNumber = UUID.randomUUID().toString();
+    @Builder.Default
+    private Integer batteryPercentage = 100;
     private Model model;
-    private Status status;
+    @Builder.Default
+    private Status status = Status.IDLE;
     private List<Medication> medicationList = new ArrayList<>();
 
     private void addMedication(Medication medication){
