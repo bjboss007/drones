@@ -29,17 +29,17 @@ public class AppInit implements InitializingBean {
         Drone drone = Drone.builder()
                 .model(Model.Heavyweight)
                 .status(Status.LOADING)
-                .weight(500.00)
+                .weight(500)
                 .medicationList(Arrays.asList(
                         Medication.builder()
                                 .code("PMD")
-                                .weight(20.00)
+                                .weight(20)
                                 .name("Paracetamol")
                                 .image("http://res.cloudinary.com/habib007/image/upload/v1645218982/qtbgc8ic4eidr7zhbeg7.jpg")
                                 .build(),
                         Medication.builder()
                                 .code("PMD")
-                                .weight(20.00)
+                                .weight(200)
                                 .name("Septrine")
                                 .image("http://res.cloudinary.com/habib007/image/upload/v1645218982/qtbgc8ic4eidr7zhbeg7.jpg")
                                 .build()
@@ -102,7 +102,32 @@ public class AppInit implements InitializingBean {
                                 .build()
                 )).build();
 
-        droneRepository.saveAll(Arrays.asList(drone, drone2, drone3, drone4));
+        Drone drone5 = Drone.builder()
+                .model(Model.Lightweight)
+                .status(Status.IDLE)
+                .weight(40)
+                .build();
+
+        Drone drone6 = Drone.builder()
+                .model(Model.Lightweight)
+                .status(Status.LOADED)
+                .weight(40)
+                .medicationList(Arrays.asList(
+                        Medication.builder()
+                                .code("PMD")
+                                .weight(20)
+                                .name("Paracetamol")
+                                .image("http://res.cloudinary.com/habib007/image/upload/v1645218982/qtbgc8ic4eidr7zhbeg7.jpg")
+                                .build(),
+                        Medication.builder()
+                                .code("PMD")
+                                .weight(20)
+                                .name("Septrine")
+                                .image("http://res.cloudinary.com/habib007/image/upload/v1645218982/qtbgc8ic4eidr7zhbeg7.jpg")
+                                .build()
+                )).build();
+
+        droneRepository.saveAll(Arrays.asList(drone, drone2, drone3, drone4, drone5, drone6));
     }
 
 
