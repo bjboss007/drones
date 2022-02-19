@@ -35,13 +35,13 @@ public class AppInit implements InitializingBean {
                                 .code("PMD")
                                 .weight(20.00)
                                 .name("Paracetamol")
-                                .image("pictureUrl")
+                                .image("http://res.cloudinary.com/habib007/image/upload/v1645218982/qtbgc8ic4eidr7zhbeg7.jpg")
                                 .build(),
                         Medication.builder()
                                 .code("PMD")
                                 .weight(20.00)
                                 .name("Septrine")
-                                .image("pictureUrl")
+                                .image("http://res.cloudinary.com/habib007/image/upload/v1645218982/qtbgc8ic4eidr7zhbeg7.jpg")
                                 .build()
                 )).build();
 
@@ -54,13 +54,13 @@ public class AppInit implements InitializingBean {
                                 .code("PMD")
                                 .weight(40.00)
                                 .name("Paracetamol double")
-                                .image("pictureUrl")
+                                .image("http://res.cloudinary.com/habib007/image/upload/v1645218982/qtbgc8ic4eidr7zhbeg7.jpg")
                                 .build(),
                         Medication.builder()
                                 .code("PMD")
                                 .weight(12.00)
                                 .name("Septrine single")
-                                .image("pictureUrl")
+                                .image("http://res.cloudinary.com/habib007/image/upload/v1645218982/qtbgc8ic4eidr7zhbeg7.jpg")
                                 .build()
                 )).build();
 
@@ -73,13 +73,13 @@ public class AppInit implements InitializingBean {
                                 .code("PMD")
                                 .weight(20.00)
                                 .name("Paracetamol")
-                                .image("pictureUrl")
+                                .image("http://res.cloudinary.com/habib007/image/upload/v1645218982/qtbgc8ic4eidr7zhbeg7.jpg")
                                 .build(),
                         Medication.builder()
                                 .code("PMD")
                                 .weight(20.00)
                                 .name("Septrine")
-                                .image("pictureUrl")
+                                .image("http://res.cloudinary.com/habib007/image/upload/v1645218982/qtbgc8ic4eidr7zhbeg7.jpg")
                                 .build()
                 )).build();
 
@@ -92,13 +92,13 @@ public class AppInit implements InitializingBean {
                                 .code("PMD")
                                 .weight(20.00)
                                 .name("Paracetamol")
-                                .image("pictureUrl")
+                                .image("http://res.cloudinary.com/habib007/image/upload/v1645218982/qtbgc8ic4eidr7zhbeg7.jpg")
                                 .build(),
                         Medication.builder()
                                 .code("PMD")
                                 .weight(20.00)
                                 .name("Septrine")
-                                .image("pictureUrl")
+                                .image("http://res.cloudinary.com/habib007/image/upload/v1645218982/qtbgc8ic4eidr7zhbeg7.jpg")
                                 .build()
                 )).build();
 
