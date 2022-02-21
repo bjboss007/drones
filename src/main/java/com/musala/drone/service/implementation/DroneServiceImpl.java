@@ -12,6 +12,7 @@ import com.musala.drone.model.dto.MedicationListDTO;
 import com.musala.drone.model.enums.Status;
 import com.musala.drone.repository.DroneRepository;
 import com.musala.drone.service.DroneService;
+import io.swagger.models.auth.In;
 import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -63,6 +64,19 @@ public class DroneServiceImpl implements DroneService {
     @Override
     public List<Drone> availableDroneForLoading() {
         return droneRepository.findDronesByStatus(Status.LOADING);
+    }
+
+    @Override
+    public Drone updateBatteryLevel(String droneId, int batteryLevel) {
+        Drone drone = fetchDroneById(droneId);
+        int totalBatteryLevel = drone.getBatteryPercentage() + batteryLevel;
+        if(drone.getBatteryPercentage() < 100 & totalBatteryLevel <= 100){
+            drone.setBatteryPercentage(totalBatteryLevel);
+            droneRepository.save(drone);
+        }else {
+            throw new BadRequestException("Battery level is above 100 percent!");
+        }
+        return drone;
     }
 
     @Override

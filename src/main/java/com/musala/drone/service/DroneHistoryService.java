@@ -6,6 +6,6 @@ import org.springframework.data.domain.Pageable;
 
 public interface DroneHistoryService {
     void recordHistory();
-    Page<DroneHistory> fetchAllHistory(Pageable pageable);
+    Page<DroneHistory> fetchAllHistory(Pageable pageable, String filterBy);
 
 }

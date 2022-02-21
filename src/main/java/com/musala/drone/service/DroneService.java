@@ -16,7 +16,7 @@ public interface DroneService {
     Drone fetchDroneById(String droneId);
     List<Medication> fetchDroneMedicationsWithId(String droneId);
     List<Drone> availableDroneForLoading();
-//    Drone loadDrone(String drone, List<MedicationDTO> medicationList);
+    Drone updateBatteryLevel(String drone, int batteryLevel);
     Drone loadDrone(String drone, MedicationListDTO medicationList);
     Drone updateStatus(String droneId, Status status);
 

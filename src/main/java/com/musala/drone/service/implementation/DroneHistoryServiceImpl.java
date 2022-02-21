@@ -32,7 +32,8 @@ public class DroneHistoryServiceImpl implements DroneHistoryService {
     }
 
     @Override
-    public Page<DroneHistory> fetchAllHistory(Pageable pageable) {
+    public Page<DroneHistory> fetchAllHistory(Pageable pageable, String filterBy) {
+        if(filterBy != null) return droneHistoryRepository.findAllBySerialNumber(filterBy, pageable);
         return droneHistoryRepository.findAll(pageable);
     }
 }
