@@ -104,7 +104,7 @@ public class DroneController {
         return ResponseEntity.ok(response);
     }
 
-    @PatchMapping("update-status")
+    @PatchMapping("update-battery-level")
     public ResponseEntity<?> rechargeDrone(@RequestParam("droneId") String droneId, @RequestParam("batterylevel") int level){
         AppResponse response = AppResponse.builder()
                 .message("success")
